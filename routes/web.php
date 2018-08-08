@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{lang?}', ['uses' => 'HomeController@index', 'as' => 'home']);
+Route::get('/login/{lang?}', 'LoginController@index');

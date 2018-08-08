@@ -66,28 +66,17 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{__('home.home_view')}}
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">{{__('home.documentation')}}</a>
+                    <a href="https://laracasts.com">{{__('home.laracasts')}}</a>
+                    <a href="https://laravel-news.com">{{__('home.news')}}</a>
+                    <a href="https://forge.laravel.com">{{__('home.forge')}}</a>
+                    <a href="https://github.com/laravel/laravel">{{__('home.gitHub')}}</a>
                 </div>
             </div>
         </div>
